@@ -1,0 +1,29 @@
+[
+    {
+      "model": "liftlog.exercisemaster",
+      "pk": 1,
+      "fields": {
+        "name": "ベンチプレス",
+        "body_part": "胸",
+        "rest_time_seconds": 90
+      }
+    },
+    {
+      "model": "liftlog.exercisemaster",
+      "pk": 2,
+      "fields": {
+        "name": "スクワット",
+        "body_part": "脚",
+        "rest_time_seconds": 120
+      }
+    },
+    {
+      "model": "liftlog.exercisemaster",
+      "pk": 3,
+      "fields": {
+        "name": "懸垂",
+        "body_part": "背中",
+        "rest_time_seconds": 60
+      }
+    }
+  ]
