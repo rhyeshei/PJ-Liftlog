@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'liftlog.apps.LiftlogConfig',
     'corsheaders',
     'drf_spectacular',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -76,12 +77,14 @@ MIDDLEWARE = [
 # 開発中：すべての接続を許可する場合（本番では特定のドメインに絞ります）
 CORS_ALLOW_ALL_ORIGINS = True
 
+
 # 本番時 の切り替え用
 # CORS_ALLOW_ALL_ORIGINS = False
 
 # CORS_ALLOWED_ORIGINS = [
 #     "https://liftlog.app",
 #     "https://admin.liftlog.app",
+#     "http://localhost:5173",# Viteのデフォルトポート
 # ]
 
 ROOT_URLCONF = 'pj_liftlog.urls'
