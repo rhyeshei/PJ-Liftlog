@@ -3,9 +3,27 @@ from .models import Workout, SetRecord, ExerciseMaster, MusicAuth, TemplateExerc
 
 # 種目のシリアライザ
 class ExerciseMasterSerializer(serializers.ModelSerializer):
+    body_part_label = serializers.CharField(
+        source='get_body_part_display',
+        read_only=True
+    )
+    movement_label = serializers.CharField(
+        source='get_movement_display',
+        read_only=True
+    )
+    
     class Meta:
         model = ExerciseMaster
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'body_part',
+            'body_part_label',
+            'body_part_other',
+            'movement',
+            'movement_label',
+            'rest_time_seconds',
+        ]
 
 # セット記録のシリアライザ
 class SetRecordSerializer(serializers.ModelSerializer):

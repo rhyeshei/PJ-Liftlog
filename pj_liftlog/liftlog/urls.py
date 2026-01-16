@@ -1,11 +1,12 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import WorkoutViewSet, MusicAuthView, PlayListView, WorkoutAnalyticsViews, TemplateViewSet
+from .views import WorkoutViewSet, ExerciseMasterViewSet, MusicAuthView, PlayListView, WorkoutAnalyticsViews, TemplateViewSet
 
 # Routerを使ってViewSetを自動的にURLに紐付ける
 router = DefaultRouter()
 router.register(r'workout', WorkoutViewSet, basename='workout')
 router.register(r'templates', TemplateViewSet, basename='template')
+router.register(r'exercises', ExerciseMasterViewSet)
 
 urlpatterns = [
     # /api/の後に続くルートを登録
