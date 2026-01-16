@@ -9,8 +9,8 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
-from .models import Workout, SetRecord, MusicAuth, Template, TemplateExercise
-from .serializers import WorkoutSerializer, SetRecordSerializer, MusicAuthSerializer, TemplateSerializer
+from .models import Workout, ExerciseMaster, SetRecord, MusicAuth, Template, TemplateExercise
+from .serializers import WorkoutSerializer, ExerciseMasterSerializer, SetRecordSerializer, MusicAuthSerializer, TemplateSerializer
 
 
 class WorkoutViewSet(viewsets.ModelViewSet):
@@ -64,6 +64,10 @@ class WorkoutViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK
         )
     
+
+class ExerciseMasterViewSet(viewsets.ModelViewSet):
+    queryset = ExerciseMaster.objects.all()
+    serializer_class = ExerciseMasterSerializer
 
 class MusicAuthView(APIView):
     permission_classes = [IsAuthenticated]

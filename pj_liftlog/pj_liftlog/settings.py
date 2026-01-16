@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'liftlog.apps.LiftlogConfig',
     'corsheaders',
     'drf_spectacular',
-    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
